@@ -4,10 +4,13 @@ body{
 }
 
 .QrCode{
-    background-color: #222;
-    color: blueviolet;
-    width: 900%;
-    height: 300px;
+
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+ 
   }
 
 .QrCode div {
@@ -15,8 +18,3 @@ body{
     background-color: white;
 }
 
-canvas {
-  height: auto !important;
-  width: 100% !important;
-  max-width: 300px;
-}

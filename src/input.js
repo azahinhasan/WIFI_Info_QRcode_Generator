@@ -1,6 +1,6 @@
 
 import React,{Component,Fragment} from 'react';
-
+import classes from './input.css';
 
 
 
@@ -13,7 +13,7 @@ class Input extends Component{ //class based compornent....
     
         <div> 
             
-            <table>
+            <table className={classes.table}>
                 <tr>
                     <td>
                     SSID:

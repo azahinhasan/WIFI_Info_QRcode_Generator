@@ -1,6 +1,6 @@
 
 import React,{Component} from 'react';
-import  './qrCode.css';
+import  classes from'./qrCode.css';
 import QrCode from 'react.qrcode.generator';
 //npm install react.qrcode.generator
 
@@ -40,7 +40,8 @@ class QRcode extends Component{
 
         <p>hh {this.props.data.ssid}</p>
 
-        <p >aa{this.returnValue(value)}</p>
+        <div className={classes.QrCode}>aa{this.returnValue(value)}</div>
+
 
         </div>
 

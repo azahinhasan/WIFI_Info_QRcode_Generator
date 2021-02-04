@@ -53,15 +53,23 @@ makeQRcode=()=>{
   render() {
     return (
 
+      
       <div className={classes.App}>
+
+       
+
+      <div className={classes.noPrint}>
         <Input
         onSSIDchange={this.onSSIDchange} 
         onPASSWORDchange={this.onPASSWORDchange} 
         onENCRYPTIONchange={this.onENCRYPTIONchange} 
         onHIDDENchange={this.onHIDDENchange}  
         />
+      </div>
 
 
+
+      <button onClick={() => setTimeout(window.print, 1)} className={classes.noPrint}>Print</button>
       <button onClick={this.makeQRcode}>Click Here</button>
 
 
@@ -76,10 +84,10 @@ makeQRcode=()=>{
 
 
         <p>Hello</p>
-        <p>hi {this.state.ssid}</p>
-        <p>hi {this.state.password}</p>
-        <p>hi {this.state.encryption}</p>
-        <p>hi {this.state.hidden}</p>
+        <p className={classes.noPrint}> className={classes.noPrint}hi {this.state.ssid}</p>
+        <p className={classes.noPrint}>hi {this.state.password}</p>
+        <p className={classes.noPrint}>hi {this.state.encryption}</p>
+        <p className={classes.noPrint}> hi {this.state.hidden}</p>
         <p>hi {this.state.makeQR}</p>
       </div>
       

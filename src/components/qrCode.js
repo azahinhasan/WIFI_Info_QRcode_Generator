@@ -10,10 +10,6 @@ class QRcode extends Component{
 
 
 
-    handleChange() {
-        // Update component state whenever the data source changes
-    }
-
 
 
     returnValue = (value) =>{
@@ -29,7 +25,7 @@ class QRcode extends Component{
 
 
 
- downloadQR = (value) => {
+ downloadQR = () => {
     var can = document.getElementsByTagName("canvas");
 
     const pngUrl = can[0].toDataURL("image/png");
@@ -53,9 +49,19 @@ class QRcode extends Component{
     
         <div>      
             <h2 className={classes.QrCode}>Scan For WiFi Information </h2>
+            <h4 className={classes.Print}>SSID:{this.props.data.ssid}</h4>
             <br></br>
             <div className={classes.QrCode}>{this.returnValue(value)}</div>
-           <button onClick={this.downloadQR}>Download</button>
+            <div  className={classes.noPrint}>
+                <button onClick={this.downloadQR}>Download</button>
+                <button onClick={() => setTimeout(window.print, 1)}>Print</button>
+            </div>
+            {/* { this.props.data.downloadPNG ? (
+
+                <div>
+                    aa{this.downloadQR}
+                </div>
+            ) : null } */}
         </div>
 
         

@@ -14,7 +14,8 @@ class App extends Component {
     password:'',
     encryption:'WPA',
     hidden: true,
-    makeQR:false
+    makeQR:false,
+    downloadPNG:true
 
   };
 
@@ -45,6 +46,9 @@ makeQRcode=()=>{
   
 }
 
+downloadPNG =()=>{
+  this.setState({ downloadPNG: true});
+}
 
 
 
@@ -64,6 +68,7 @@ makeQRcode=()=>{
         onPASSWORDchange={this.onPASSWORDchange} 
         onENCRYPTIONchange={this.onENCRYPTIONchange} 
         onHIDDENchange={this.onHIDDENchange}  
+
         />
 
         <button onClick={this.makeQRcode}>Click Here</button>
@@ -87,8 +92,7 @@ makeQRcode=()=>{
       { this.state.makeQR ? (
 
         <div>
-          <QrCode data={this.state}/>
-          <button onClick={() => setTimeout(window.print, 1)} className={classes.noPrint}>Print</button>
+          <QrCode data={this.state}/> 
         </div>
           ) : null }
 

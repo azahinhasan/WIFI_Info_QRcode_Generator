@@ -18,3 +18,15 @@ body{
     background-color: white;
 }
 
+.Print{
+  display:none;
+}
+
+@media print {
+  .noPrint{
+    display:none;
+  }
+  .Print{
+    display:block;
+  }
+}

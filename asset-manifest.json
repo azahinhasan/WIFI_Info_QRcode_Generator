@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/azahinhasan.github.io/WiFi_Info_QRcode_Generator/static/css/main.d15e8b96.chunk.css",
+    "main.js": "/azahinhasan.github.io/WiFi_Info_QRcode_Generator/static/js/main.d0b3e525.chunk.js",
+    "main.js.map": "/azahinhasan.github.io/WiFi_Info_QRcode_Generator/static/js/main.d0b3e525.chunk.js.map",
+    "runtime-main.js": "/azahinhasan.github.io/WiFi_Info_QRcode_Generator/static/js/runtime-main.6d873ead.js",
+    "runtime-main.js.map": "/azahinhasan.github.io/WiFi_Info_QRcode_Generator/static/js/runtime-main.6d873ead.js.map",
+    "static/js/2.ac68b26c.chunk.js": "/azahinhasan.github.io/WiFi_Info_QRcode_Generator/static/js/2.ac68b26c.chunk.js",
+    "static/js/2.ac68b26c.chunk.js.map": "/azahinhasan.github.io/WiFi_Info_QRcode_Generator/static/js/2.ac68b26c.chunk.js.map",
+    "static/js/3.e8f7f85d.chunk.js": "/azahinhasan.github.io/WiFi_Info_QRcode_Generator/static/js/3.e8f7f85d.chunk.js",
+    "static/js/3.e8f7f85d.chunk.js.map": "/azahinhasan.github.io/WiFi_Info_QRcode_Generator/static/js/3.e8f7f85d.chunk.js.map",
+    "index.html": "/azahinhasan.github.io/WiFi_Info_QRcode_Generator/index.html",
+    "static/css/main.d15e8b96.chunk.css.map": "/azahinhasan.github.io/WiFi_Info_QRcode_Generator/static/css/main.d15e8b96.chunk.css.map",
+    "static/js/2.ac68b26c.chunk.js.LICENSE.txt": "/azahinhasan.github.io/WiFi_Info_QRcode_Generator/static/js/2.ac68b26c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6d873ead.js",
+    "static/js/2.ac68b26c.chunk.js",
+    "static/css/main.d15e8b96.chunk.css",
+    "static/js/main.d0b3e525.chunk.js"
+  ]
+}

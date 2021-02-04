@@ -28,6 +28,21 @@ class QRcode extends Component{
     
 
 
+
+ downloadQR = (value) => {
+    var can = document.getElementsByTagName("canvas");
+
+    const pngUrl = can[0].toDataURL("image/png");
+
+    let downloadLink = document.createElement("a");
+    downloadLink.href = pngUrl;
+    downloadLink.download = "qrCODE.png";
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+  };
+
+
     render(){
         const value = "WIFI:S:"+this.props.data.ssid+";T:"+this.props.data.encryption
         +";P:"+this.props.data.password+";H:"+String(this.props.data.hidden)+";" ;
@@ -36,14 +51,14 @@ class QRcode extends Component{
 
         return(
     
-        <div> 
-
-        <p>hh {this.props.data.ssid}</p>
-
-        <div className={classes.QrCode}>aa{this.returnValue(value)}</div>
-
-
+        <div>      
+            <h2 className={classes.QrCode}>Scan For WiFi Information </h2>
+            <br></br>
+            <div className={classes.QrCode}>{this.returnValue(value)}</div>
+           <button onClick={this.downloadQR}>Download</button>
         </div>
+
+        
 
         )     
     }

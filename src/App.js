@@ -65,30 +65,34 @@ makeQRcode=()=>{
         onENCRYPTIONchange={this.onENCRYPTIONchange} 
         onHIDDENchange={this.onHIDDENchange}  
         />
+
+        <button onClick={this.makeQRcode}>Click Here</button>
+
+
+        
+        <p>Hello</p>
+        <p > className={classes.noPrint}hi {this.state.ssid}</p>
+        <p >hi {this.state.password}</p>
+        <p >hi {this.state.encryption}</p>
+        <p > hi {this.state.hidden}</p>
+        <p>hi {this.state.makeQR}</p>
       </div>
 
 
+      
+      
 
-      <button onClick={() => setTimeout(window.print, 1)} className={classes.noPrint}>Print</button>
-      <button onClick={this.makeQRcode}>Click Here</button>
 
 
       { this.state.makeQR ? (
 
-          <QrCode
-            data={this.state}
-          
-          />
-
+        <div>
+          <QrCode data={this.state}/>
+          <button onClick={() => setTimeout(window.print, 1)} className={classes.noPrint}>Print</button>
+        </div>
           ) : null }
 
 
-        <p>Hello</p>
-        <p className={classes.noPrint}> className={classes.noPrint}hi {this.state.ssid}</p>
-        <p className={classes.noPrint}>hi {this.state.password}</p>
-        <p className={classes.noPrint}>hi {this.state.encryption}</p>
-        <p className={classes.noPrint}> hi {this.state.hidden}</p>
-        <p>hi {this.state.makeQR}</p>
       </div>
       
     );

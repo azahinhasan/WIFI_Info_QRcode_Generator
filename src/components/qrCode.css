@@ -1,0 +1,22 @@
+
+body{
+  color: blueviolet;
+}
+
+.QrCode{
+    background-color: #222;
+    color: blueviolet;
+    width: 900%;
+    height: 300px;
+  }
+
+.QrCode div {
+
+    background-color: white;
+}
+
+canvas {
+  height: auto !important;
+  width: 100% !important;
+  max-width: 300px;
+}

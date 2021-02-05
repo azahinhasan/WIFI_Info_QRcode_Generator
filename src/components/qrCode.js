@@ -10,8 +10,6 @@ class QRcode extends Component{
 
 
 
-
-
     returnValue = (value) =>{
 
     return <QrCode 

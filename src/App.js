@@ -11,7 +11,7 @@ class App extends Component {
   state={
     //ssid:5,
 
-    ssid:'0',
+    ssid:'',
     password:'',
     encryption:'WPA',
     hidden: true,
@@ -19,7 +19,7 @@ class App extends Component {
     downloadPNG:true,
     disabledButton:false,
     textEditable:false,
-    seeQRbtn:false
+    seeQRbtn:true
 
   };
 
@@ -64,13 +64,16 @@ seeQRbtn(){
    this.setState({ seeQRbtn: false});
 }
 
-shouldComponentUpdate(){
 
-  // if(this.state.ssid.length > 0){
-  //   element.addEventListener("click", handler);
+getSnapshotBeforeUpdate(nextProps, nextState){
+
+  // if(this.state.ssid.length > 1){
+  //   this.setState({ seeQRbtn: false});
+  //   console.log(this.state.ssid.length+"MOunt")
   // }
+  console.log("shouldComponentUpdate")
+  return this.state.value != nextState.value;
 
-  return true;
 }
 
   render() {
@@ -109,7 +112,7 @@ shouldComponentUpdate(){
               ) :  
               <button onClick={this.makeQRcode}
                className={classesBtn.button}
-               disabled={this.state.seeQRbtn}
+               disabled={this.state.ssid.length>0 & this.state.password.length>0? false : true}
                >Click Here</button> }
            
             

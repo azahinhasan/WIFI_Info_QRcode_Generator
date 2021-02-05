@@ -8,6 +8,15 @@ import classes from './input.css';
 class Input extends Component{ //class based compornent....
 
 
+    state={
+        passHidden:true
+    }
+
+    passHidden=() =>{
+        this.setState({ passHidden: !this.state.passHidden});
+    }
+
+
     render(){
         return(
     
@@ -30,10 +39,13 @@ class Input extends Component{ //class based compornent....
                     PASSWORD:
                     </td>
                     <td>
-                    <input type="text" 
+                    <input type={this.state.passHidden ? 'password' : 'text'}
                     onChange={this.props.onPASSWORDchange}
                     className={classes.input}
                     disabled={this.props.state.textEditable}/>
+                    <button onClick={this.passHidden} className={classes.hideIcon}
+                    ><img src="https://img.icons8.com/fluent-systems-regular/24/000000/visible.png"/>
+                    </button>
                     </td>
                 </tr>
                 <tr>

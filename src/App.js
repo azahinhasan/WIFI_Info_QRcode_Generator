@@ -3,6 +3,7 @@ import classes from './App.css';
 import Input from './input';
 import QrCode from './components/qrCode';
 import classesBtn from './button.css';
+import Aritcle from './article';
 class App extends Component {
 
 
@@ -107,8 +108,10 @@ tryAgain=()=>{
         ) :  null }
 
 
-
-
+          <br></br>
+          <br></br>
+          <div className={classes.noPrint}><Aritcle/></div>
+          
       </div>
       
     );

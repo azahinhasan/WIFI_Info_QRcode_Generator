@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
     <meta meta name="viewport" content=  
-            "372, user-scalable=no" /> 
+            "width=device-width, user-scalable=no" /> 
     <App />
   </React.StrictMode>,
   document.getElementById('root')

@@ -117,7 +117,7 @@ getSnapshotBeforeUpdate(nextProps, nextState){
               (<div>
               
                 <span  hidden={this.state.ssid.length>0 & this.state.password.length>0? true : false}>
-                  [P.S. Please Enter SSID and PASSWORD to Continue]
+                  [P.S.Please Enter SSID and PASSWORD to Continue]
                 </span>
                 <br></br>
                 <br></br>

@@ -19,8 +19,8 @@ class App extends Component {
     downloadPNG:true,
     disabledButton:false,
     textEditable:false,
-    seeQRbtn:true
-
+    seeQRbtn:true,
+    errorMsg:''
   };
 
 
@@ -46,6 +46,7 @@ onHIDDENchange = () => {
 };
 
 makeQRcode=()=>{
+
   this.setState({ makeQR: true});
   this.setState({ textEditable: true});
   
@@ -98,10 +99,12 @@ getSnapshotBeforeUpdate(nextProps, nextState){
             state={this.state} 
 
         />
+        <br></br>
             </td>
           </tr>
           <tr>
             <td>
+
             { this.state.makeQR ? (
 
                 <div>
@@ -109,13 +112,22 @@ getSnapshotBeforeUpdate(nextProps, nextState){
 
                 </div>
                 
-              ) :  
-              <button onClick={this.makeQRcode}
-               className={classesBtn.button}
-               disabled={this.state.ssid.length>0 & this.state.password.length>0? false : true}
-               >Click Here</button> }
-           
-            
+              ) : 
+              
+              (<div>
+              
+                <span  hidden={this.state.ssid.length>0 & this.state.password.length>0? true : false}>
+                  [P.S. Please Enter SSID and PASSWORD to Continue]
+                </span>
+                <br></br>
+                <br></br>
+                <button onClick={this.makeQRcode}
+                className={classesBtn.button}
+                disabled={this.state.ssid.length>0 & this.state.password.length>0? false : true}  
+                >Click Here</button>
+              </div>
+               )
+            }
 
             </td>
           </tr>

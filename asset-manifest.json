@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/WiFi_Info_QRcode_Generator/static/css/main.3fb04f89.chunk.css",
-    "main.js": "/WiFi_Info_QRcode_Generator/static/js/main.7f8b3794.chunk.js",
-    "main.js.map": "/WiFi_Info_QRcode_Generator/static/js/main.7f8b3794.chunk.js.map",
+    "main.js": "/WiFi_Info_QRcode_Generator/static/js/main.7ddb7152.chunk.js",
+    "main.js.map": "/WiFi_Info_QRcode_Generator/static/js/main.7ddb7152.chunk.js.map",
     "runtime-main.js": "/WiFi_Info_QRcode_Generator/static/js/runtime-main.216060a0.js",
     "runtime-main.js.map": "/WiFi_Info_QRcode_Generator/static/js/runtime-main.216060a0.js.map",
     "static/js/2.8d7a9d92.chunk.js": "/WiFi_Info_QRcode_Generator/static/js/2.8d7a9d92.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.216060a0.js",
     "static/js/2.8d7a9d92.chunk.js",
     "static/css/main.3fb04f89.chunk.css",
-    "static/js/main.7f8b3794.chunk.js"
+    "static/js/main.7ddb7152.chunk.js"
   ]
 }

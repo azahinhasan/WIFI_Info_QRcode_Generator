@@ -1,5 +1,5 @@
 .App {
-  border: 1px solid #222;
+  border: 2px solid rgb(100, 22, 172);
   margin: 4px 2px;
   position: relative;
   width: 600px;
@@ -7,7 +7,6 @@
   margin-right: auto;
   justify-content: center;
   padding: 10px;
-  box-shadow: 3px 3px #888888;
 
 }
 
@@ -22,6 +21,8 @@
   border: 1px;
   margin-left: auto; 
   margin-right: auto;
+  position: relative;
+  top:20px;
 
 }
 

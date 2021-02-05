@@ -17,7 +17,9 @@ class App extends Component {
     hidden: true,
     makeQR:false,
     downloadPNG:true,
-    disabledButton:false
+    disabledButton:false,
+    textEditable:false,
+    seeQRbtn:false
 
   };
 
@@ -45,6 +47,7 @@ onHIDDENchange = () => {
 
 makeQRcode=()=>{
   this.setState({ makeQR: true});
+  this.setState({ textEditable: true});
   
 }
 
@@ -57,7 +60,18 @@ tryAgain=()=>{
   window.location.reload(false);
 }
 
+seeQRbtn(){
+   this.setState({ seeQRbtn: false});
+}
 
+shouldComponentUpdate(){
+
+  // if(this.state.ssid.length > 0){
+  //   element.addEventListener("click", handler);
+  // }
+
+  return true;
+}
 
   render() {
     return (
@@ -69,6 +83,7 @@ tryAgain=()=>{
 
       <div className={classes.noPrint}>
         <h1>WiFi QR Code Genarator</h1>
+
         <table className={classes.table}>
           <tr>
             <td>
@@ -76,7 +91,8 @@ tryAgain=()=>{
             onSSIDchange={this.onSSIDchange} 
             onPASSWORDchange={this.onPASSWORDchange} 
             onENCRYPTIONchange={this.onENCRYPTIONchange} 
-            onHIDDENchange={this.onHIDDENchange}  
+            onHIDDENchange={this.onHIDDENchange} 
+            state={this.state} 
 
         />
             </td>
@@ -91,7 +107,10 @@ tryAgain=()=>{
                 </div>
                 
               ) :  
-              <button onClick={this.makeQRcode} className={classesBtn.button}>Click Here</button> }
+              <button onClick={this.makeQRcode}
+               className={classesBtn.button}
+               disabled={this.state.seeQRbtn}
+               >Click Here</button> }
            
             
 

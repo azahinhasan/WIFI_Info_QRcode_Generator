@@ -21,7 +21,8 @@ class Input extends Component{ //class based compornent....
                     <td>
                     <input type="text" 
                     onChange={this.props.onSSIDchange}
-                    className={classes.input}/>
+                    className={classes.input}
+                    disabled={this.props.state.textEditable}/>
                     </td>
                 </tr>
                 <tr>
@@ -31,7 +32,8 @@ class Input extends Component{ //class based compornent....
                     <td>
                     <input type="text" 
                     onChange={this.props.onPASSWORDchange}
-                    className={classes.input}/>
+                    className={classes.input}
+                    disabled={this.props.state.textEditable}/>
                     </td>
                 </tr>
                 <tr>
@@ -39,7 +41,9 @@ class Input extends Component{ //class based compornent....
                     ENCRYPTION:
                     </td>
                     <td>
-                    <select name="" id="" onChange={this.props.onENCRYPTIONchange}>
+                    <select name="" id=""
+                    onChange={this.props.onENCRYPTIONchange}
+                    disabled={this.props.state.textEditable}>
                         <option value="WPA">WPA/WPA2</option>
                         <option value="WEP">WEP</option>
                         <option value="nopass">None</option>

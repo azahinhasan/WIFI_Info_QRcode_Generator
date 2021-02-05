@@ -15,7 +15,8 @@ class App extends Component {
     encryption:'WPA',
     hidden: true,
     makeQR:false,
-    downloadPNG:true
+    downloadPNG:true,
+    disabledButton:false
 
   };
 
@@ -51,6 +52,9 @@ downloadPNG =()=>{
 }
 
 
+tryAgain=()=>{
+  window.location.reload(false);
+}
 
 
 
@@ -63,50 +67,46 @@ downloadPNG =()=>{
        
 
       <div className={classes.noPrint}>
+        <h1>WiFi QR Code Genarator</h1>
         <table className={classes.table}>
           <tr>
             <td>
             <Input
-        onSSIDchange={this.onSSIDchange} 
-        onPASSWORDchange={this.onPASSWORDchange} 
-        onENCRYPTIONchange={this.onENCRYPTIONchange} 
-        onHIDDENchange={this.onHIDDENchange}  
+            onSSIDchange={this.onSSIDchange} 
+            onPASSWORDchange={this.onPASSWORDchange} 
+            onENCRYPTIONchange={this.onENCRYPTIONchange} 
+            onHIDDENchange={this.onHIDDENchange}  
 
         />
             </td>
           </tr>
           <tr>
             <td>
-            <button onClick={this.makeQRcode} className={classesBtn.button}>Click Here</button>
+            { this.state.makeQR ? (
+
+                <div>
+                  <button onClick={this.tryAgain} className={classesBtn.button}>Try Again</button>
+
+                </div>
+                
+              ) :  
+              <button onClick={this.makeQRcode} className={classesBtn.button}>Click Here</button> }
+           
+            
 
             </td>
           </tr>
         </table>
     
-
-        
-
-        
-        <p>Hello</p>
-        <p > className={classes.noPrint}hi {this.state.ssid}</p>
-        <p >hi {this.state.password}</p>
-        <p >hi {this.state.encryption}</p>
-        <p > hi {this.state.hidden}</p>
-        <p>hi {this.state.makeQR}</p>
-      </div>
-
-
-      
-      
-
-
-
-      { this.state.makeQR ? (
-
-        <div>
-          <QrCode data={this.state}/> 
         </div>
-          ) : null }
+        
+
+        { this.state.makeQR ? (
+
+                <div><QrCode data={this.state}/> </div>
+        ) :  null }
+
+
 
 
       </div>

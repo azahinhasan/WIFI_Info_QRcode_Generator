@@ -64,7 +64,7 @@ class QRcode extends Component{
                 <tr>
                     <td>
                     <div  className={classes.noPrint}>
-                        <button onClick={this.downloadQR} className={classesBtn.button}>Download</button>
+                        <button onClick={this.downloadQR} className={classesBtn.button}>Download(.PNG)</button>
                         <br></br>
                         <button onClick={() => setTimeout(window.print, 1)} className={classesBtn.button}>Print</button>
                     </div>

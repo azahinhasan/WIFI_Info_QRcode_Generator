@@ -1,5 +1,5 @@
 .button {
-    background-color: #4CAF50; /* Green */
+    background-color: blueviolet; /* Green */
     border: 5px;
     color: white;
     padding: 16px 32px;
@@ -12,17 +12,20 @@
     cursor: pointer;
     background-color: white; 
     color: black; 
-    border: 2px solid #4CAF50;
+    border: 3px solid blueviolet;
     position: relative;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
     left: 0%;
+    color: blueviolet;
+    font-weight: bold;
+    
   }
 
   
   .button:hover {
-    background-color: #4CAF50;
+    background-color: blueviolet;
     color: white;
   }
 

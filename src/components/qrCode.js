@@ -3,7 +3,7 @@ import React,{Component} from 'react';
 import  classes from'./qrCode.css';
 import QrCode from 'react.qrcode.generator';
 //npm install react.qrcode.generator
-
+import classesBtn from '../button.css';
 
 
 class QRcode extends Component{ 
@@ -47,15 +47,33 @@ class QRcode extends Component{
 
         return(
     
-        <div>      
-            <h2 className={classes.QrCode}>Scan For WiFi Information </h2>
-            <h4 className={classes.Print}>SSID:{this.props.data.ssid}</h4>
-            <br></br>
-            <div className={classes.QrCode}>{this.returnValue(value)}</div>
-            <div  className={classes.noPrint}>
-                <button onClick={this.downloadQR}>Download</button>
-                <button onClick={() => setTimeout(window.print, 1)}>Print</button>
-            </div>
+        <div>  
+            <table className={classes.table}>
+                <tr>
+                    <td>
+                        <h2 className={classes.QrCode}>Scan For WiFi Information </h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4 className={classes.Print}>SSID:{this.props.data.ssid}</h4>
+                        <br></br>
+                        <div className={classes.QrCode}>{this.returnValue(value)}</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <div  className={classes.noPrint}>
+                        <button onClick={this.downloadQR} className={classesBtn.button}>Download</button>
+                        <br></br>
+                        <button onClick={() => setTimeout(window.print, 1)} className={classesBtn.button}>Print</button>
+                    </div>
+                    </td>
+                </tr>
+            </table>   
+            
+           
+        
             {/* { this.props.data.downloadPNG ? (
 
                 <div>

@@ -1,6 +1,52 @@
 .table {
-    border: 1px solid black;
+    border: 1px red;
     margin-left: auto; 
     margin-right: auto;
+    font-size: 15px;
+    width: 100%;
+    font-weight: bold;
 
+  }
+
+  .input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+  
+  .input:focus {
+    border: 3px solid #555;
+  }
+
+  select{
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    font-size: 15px;
+
+  }
+
+  select:focus {
+    border: 3px solid #555;
+  }
+
+  .inputCheckBox{
+    width: 10%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
   }

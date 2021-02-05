@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classes from './App.css';
 import Input from './input';
 import QrCode from './components/qrCode';
-
+import classesBtn from './button.css';
 class App extends Component {
 
 
@@ -63,16 +63,28 @@ downloadPNG =()=>{
        
 
       <div className={classes.noPrint}>
-        <Input
+        <table className={classes.table}>
+          <tr>
+            <td>
+            <Input
         onSSIDchange={this.onSSIDchange} 
         onPASSWORDchange={this.onPASSWORDchange} 
         onENCRYPTIONchange={this.onENCRYPTIONchange} 
         onHIDDENchange={this.onHIDDENchange}  
 
         />
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <button onClick={this.makeQRcode} className={classesBtn.button}>Click Here</button>
 
-        <button onClick={this.makeQRcode}>Click Here</button>
+            </td>
+          </tr>
+        </table>
+    
 
+        
 
         
         <p>Hello</p>

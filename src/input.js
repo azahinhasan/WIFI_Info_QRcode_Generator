@@ -19,7 +19,9 @@ class Input extends Component{ //class based compornent....
                     SSID:
                     </td>
                     <td>
-                    <input type="text" onChange={this.props.onSSIDchange}/>
+                    <input type="text" 
+                    onChange={this.props.onSSIDchange}
+                    className={classes.input}/>
                     </td>
                 </tr>
                 <tr>
@@ -27,7 +29,9 @@ class Input extends Component{ //class based compornent....
                     PASSWORD:
                     </td>
                     <td>
-                    <input type="text" onChange={this.props.onPASSWORDchange}/>
+                    <input type="text" 
+                    onChange={this.props.onPASSWORDchange}
+                    className={classes.input}/>
                     </td>
                 </tr>
                 <tr>
@@ -44,10 +48,12 @@ class Input extends Component{ //class based compornent....
                 </tr>
                 <tr>
                     <td>
-                   
+
                     </td>
                     <td>
-                    <input type="checkbox" onClick={this.props.onHIDDENchange}/>Hidden
+                    <input type="checkbox" onClick={this.props.onHIDDENchange}
+                    className={classes.inputCheckBox}
+                    />Hidden
                     </td>
                 </tr>
             </table>

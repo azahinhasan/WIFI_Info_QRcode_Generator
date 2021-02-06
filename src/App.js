@@ -20,7 +20,9 @@ class App extends Component {
     disabledButton:false,
     textEditable:false,
     seeQRbtn:true,
-    errorMsg:''
+    errorMsg:'',
+    darkMood:false,
+    MoodChangeButtonNmae: "Dark Mood"
   };
 
 
@@ -66,86 +68,94 @@ seeQRbtn(){
 }
 
 
-getSnapshotBeforeUpdate(nextProps, nextState){
 
-  // if(this.state.ssid.length > 1){
-  //   this.setState({ seeQRbtn: false});
-  //   console.log(this.state.ssid.length+"MOunt")
-  // }
-  console.log("shouldComponentUpdate")
-  return this.state.value != nextState.value;
 
+changeMood=()=>{
+  this.setState({ darkMood: !this.state.darkMood});
+  
+  if(this.state.darkMood){
+    this.setState({MoodChangeButtonNmae : "Dark Mood"});
+  }else{
+    this.setState({MoodChangeButtonNmae : "Light Mood"});
+  }
 }
+
 
   render() {
     return (
 
       
-      <div className={classes.App}>
+      <div className={this.state.darkMood ? classes.chngeMoodDark: classes.chngeMoodLight}>
 
        
-
+      <div className={classes.App}>
       <div className={classes.noPrint}>
+
+
+      <button 
+      onClick={this.changeMood} 
+      className={classesBtn.changeMoodBtn}>
+      {this.state.MoodChangeButtonNmae}</button>
+
+
+
         <h1>WiFi QR Code Genarator</h1>
+     
 
         <table className={classes.table}>
-          <tr>
-            <td>
-            <Input
-            onSSIDchange={this.onSSIDchange} 
-            onPASSWORDchange={this.onPASSWORDchange} 
-            onENCRYPTIONchange={this.onENCRYPTIONchange} 
-            onHIDDENchange={this.onHIDDENchange} 
-            state={this.state} 
+          <tbody>
+            <tr>
+              <td>
+                <Input
+                onSSIDchange={this.onSSIDchange} 
+                onPASSWORDchange={this.onPASSWORDchange} 
+                onENCRYPTIONchange={this.onENCRYPTIONchange} 
+                onHIDDENchange={this.onHIDDENchange} 
+                state={this.state} />
+                <br/>
+              </td>
+            </tr>
 
-        />
-        <br></br>
-            </td>
-          </tr>
-          <tr>
-            <td>
-
-            { this.state.makeQR ? (
-
-                <div>
-                  <button onClick={this.tryAgain} className={classesBtn.button}>Try Again</button>
-
-                </div>
-                
-              ) : 
-              
-              (<div>
-              
-                <span  hidden={this.state.ssid.length>0 & this.state.password.length>0? true : false}>
-                  [P.S.Please Enter SSID and PASSWORD to Continue]
-                </span>
-                <br></br>
-                <br></br>
-                <button onClick={this.makeQRcode}
-                className={classesBtn.button}
-                disabled={this.state.ssid.length>0 & this.state.password.length>0? false : true}  
-                >Click Here</button>
-              </div>
-               )
-            }
-
-            </td>
-          </tr>
+            <tr>
+              <td>
+                { this.state.makeQR ? (
+                    <div>
+                      <button onClick={this.tryAgain} className={classesBtn.button}>Try Again?</button>
+                    </div>      
+                  ) : 
+                  (<div>
+                    <span  hidden={this.state.ssid.length>0 & this.state.password.length>0? true : false}>
+                      [P.S.Please Enter SSID and PASSWORD to Continue]
+                    </span>
+                    <br></br>
+                    <br></br>
+                    <button onClick={this.makeQRcode}
+                    className={classesBtn.button}
+                    disabled={this.state.ssid.length>0 & this.state.password.length>0? false : true}  
+                    >Click Here</button>
+                  </div>
+                  )
+                }
+              </td>
+            </tr>
+          </tbody>
         </table>
     
         </div>
         
-
+        <br/> <br/>
         { this.state.makeQR ? (
-
-                <div><QrCode data={this.state}/> </div>
+          
+          <div><QrCode data={this.state}/> </div>
         ) :  null }
 
 
-          <br></br>
-          <br></br>
+          <br/> <br/>
           <div className={classes.noPrint}><Aritcle/></div>
-          
+      
+      </div>
+
+
       </div>
       
     );

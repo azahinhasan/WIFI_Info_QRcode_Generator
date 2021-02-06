@@ -47,6 +47,10 @@ class QRcode extends Component{
     
         <div>  
             <table className={classes.table}>
+            <thead>
+                <tr><td></td></tr>
+            </thead>
+            <tbody>
                 <tr>
                     <td>
                         <h2 className={classes.QrCode}>Scan For WiFi Information </h2>
@@ -61,6 +65,7 @@ class QRcode extends Component{
                 </tr>
                 <tr>
                     <td>
+                    <br></br>
                     <div  className={classes.noPrint}>
                         <button onClick={this.downloadQR} className={classesBtn.button}>Download(.PNG)</button>
                         <br></br>
@@ -68,6 +73,7 @@ class QRcode extends Component{
                     </div>
                     </td>
                 </tr>
+            </tbody>
             </table>   
             
            

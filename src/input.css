@@ -20,6 +20,7 @@
     color: blueviolet;
     font-weight: bold;
     font-size: 15px;
+    border-radius: 25px;
   }
   
   .input:focus {
@@ -29,7 +30,7 @@
   select{
     width: 70%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 5px 0;
     box-sizing: border-box;
     border: 3px solid blueviolet;
     -webkit-transition: 0.5s;
@@ -38,6 +39,7 @@
     font-size: 15px;
     color: blueviolet;
     font-weight: bold;
+    border-radius: 25px;
 
   }
 
@@ -66,6 +68,9 @@
     background-color: white;
     text-align: center;
     border: 1px solid white;
+    border-radius: 25px;
+    background-color: rgb(214, 169, 255);
+
 
   }
 

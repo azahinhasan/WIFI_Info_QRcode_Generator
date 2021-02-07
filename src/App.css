@@ -56,3 +56,17 @@ span{
   font-weight: bold;
   text-decoration: underline;
 }
+
+
+
+@media (max-width: 600px) {
+  .chngeMoodDark {
+    background-color: rgb(41, 40, 40);
+    width: max-content;
+    color: white;
+  }
+  .PSnote{
+    text-decoration: none; 
+  }
+
+}

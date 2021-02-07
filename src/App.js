@@ -99,7 +99,7 @@ changeMood=()=>{
 
 
 
-        <h1>WiFi QR Code Genarator</h1>
+        <h1>WiFi QR Code Genarato</h1>
      
 
         <table className={classes.table}>
@@ -124,7 +124,7 @@ changeMood=()=>{
                     </div>      
                   ) : 
                   (<div>
-                    <span  hidden={this.state.ssid.length>0 & this.state.password.length>0? true : false}>
+                    <span className={classes.PSnote} hidden={this.state.ssid.length>0 & this.state.password.length>0? true : false}>
                       [P.S.Please Enter SSID and PASSWORD to Continue]
                     </span>
                     <br></br>

@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/WiFi_Info_QRcode_Generator/static/css/main.ace0c03e.chunk.css",
-    "main.js": "/WiFi_Info_QRcode_Generator/static/js/main.edf61f7a.chunk.js",
-    "main.js.map": "/WiFi_Info_QRcode_Generator/static/js/main.edf61f7a.chunk.js.map",
+    "main.css": "/WiFi_Info_QRcode_Generator/static/css/main.c7b4a667.chunk.css",
+    "main.js": "/WiFi_Info_QRcode_Generator/static/js/main.1c98188d.chunk.js",
+    "main.js.map": "/WiFi_Info_QRcode_Generator/static/js/main.1c98188d.chunk.js.map",
     "runtime-main.js": "/WiFi_Info_QRcode_Generator/static/js/runtime-main.216060a0.js",
     "runtime-main.js.map": "/WiFi_Info_QRcode_Generator/static/js/runtime-main.216060a0.js.map",
-    "static/js/2.8d7a9d92.chunk.js": "/WiFi_Info_QRcode_Generator/static/js/2.8d7a9d92.chunk.js",
-    "static/js/2.8d7a9d92.chunk.js.map": "/WiFi_Info_QRcode_Generator/static/js/2.8d7a9d92.chunk.js.map",
+    "static/js/2.b48203da.chunk.js": "/WiFi_Info_QRcode_Generator/static/js/2.b48203da.chunk.js",
+    "static/js/2.b48203da.chunk.js.map": "/WiFi_Info_QRcode_Generator/static/js/2.b48203da.chunk.js.map",
     "static/js/3.aa1e285b.chunk.js": "/WiFi_Info_QRcode_Generator/static/js/3.aa1e285b.chunk.js",
     "static/js/3.aa1e285b.chunk.js.map": "/WiFi_Info_QRcode_Generator/static/js/3.aa1e285b.chunk.js.map",
     "index.html": "/WiFi_Info_QRcode_Generator/index.html",
-    "static/css/main.ace0c03e.chunk.css.map": "/WiFi_Info_QRcode_Generator/static/css/main.ace0c03e.chunk.css.map",
-    "static/js/2.8d7a9d92.chunk.js.LICENSE.txt": "/WiFi_Info_QRcode_Generator/static/js/2.8d7a9d92.chunk.js.LICENSE.txt"
+    "static/css/main.c7b4a667.chunk.css.map": "/WiFi_Info_QRcode_Generator/static/css/main.c7b4a667.chunk.css.map",
+    "static/js/2.b48203da.chunk.js.LICENSE.txt": "/WiFi_Info_QRcode_Generator/static/js/2.b48203da.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.216060a0.js",
-    "static/js/2.8d7a9d92.chunk.js",
-    "static/css/main.ace0c03e.chunk.css",
-    "static/js/main.edf61f7a.chunk.js"
+    "static/js/2.b48203da.chunk.js",
+    "static/css/main.c7b4a667.chunk.css",
+    "static/js/main.1c98188d.chunk.js"
   ]
 }
